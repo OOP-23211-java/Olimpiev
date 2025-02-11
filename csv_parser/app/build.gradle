@@ -67,3 +67,17 @@ application {
     // Define the main class for the application.
     mainClass = 'nsu.frequency_parser.App'
 }
+
+jar {
+      // gnoring duplicates of maifests while building fat jar file.
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes(
+            'Main-Class': 'nsu.frequency_parser.App'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
