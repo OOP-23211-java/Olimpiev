@@ -15,7 +15,6 @@
     <Loggers>
         <!-- Глобальный логгер -->
         <Root level="info">
-            <AppenderRef ref="Console"/>
             <AppenderRef ref="FileLogger"/>
         </Root>
     </Loggers>
