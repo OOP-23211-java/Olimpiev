@@ -18,9 +18,6 @@ public class App {
     @Parameter(names = {"--output", "-o"}, description = "Output file", required = true)
     private String outputFile;
 
-    @Parameter(names = {"--verbose", "-v"}, description = "Verbose output", arity = 0)
-    private boolean verbose;
-
     @Parameter(names = "--help", help = true) boolean help;
     
     public static void main(String[] args) {
